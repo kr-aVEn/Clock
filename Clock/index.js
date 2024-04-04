@@ -1,0 +1,32 @@
+function clock(){
+    let time= new Date();
+    let hrs=time.getHours();
+    let min=time.getMinutes();
+    let sec=time.getSeconds();
+    const week=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const date=week[time.getDate()];
+    let section=document.getElementById("day");
+    if(hrs>12){
+        hrs=hrs-12;
+    }
+    if(hrs<10){
+        hrs="0"+hrs;
+    }
+    if(min<10){
+        min="0"+min;
+
+    }
+    if(sec<10){
+        sec="0"+sec;
+    }
+    if(hrs>=12){
+        section.innerHTML="PM";
+    }
+    else{
+        section.innerHTML="AM";
+    }
+    document.getElementById("hours").innerHTML=hrs;
+    document.getElementById("minute").innerHTML=hrs;
+    document.getElementById("hours").innerHTML=hrs;
+    
+}
